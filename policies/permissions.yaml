@@ -1,0 +1,62 @@
+# Permission policies for the autonomous agent system
+
+environments:
+  local:
+    repository_read: true
+    repository_write: true
+    shell: true
+    browser: true
+    database_read: true
+    database_write: true
+    production_write: false
+    destructive_actions: false
+
+  development:
+    repository_read: true
+    repository_write: true
+    shell: true
+    browser: true
+    database_read: true
+    database_write: true
+    production_write: false
+    destructive_actions: false
+
+  test:
+    repository_read: true
+    repository_write: true
+    shell: true
+    browser: true
+    database_read: true
+    database_write: true
+    production_write: false
+    destructive_actions: false
+
+  staging:
+    repository_read: true
+    repository_write: true
+    shell: true
+    browser: false
+    database_read: true
+    database_write: false
+    production_write: false
+    destructive_actions: false
+
+  production:
+    repository_read: true
+    repository_write: false
+    shell: false
+    browser: false
+    database_read: true
+    database_write: false
+    production_write: false
+    destructive_actions: false
+
+  unknown:
+    repository_read: true
+    repository_write: false
+    shell: false
+    browser: false
+    database_read: false
+    database_write: false
+    production_write: false
+    destructive_actions: false
